@@ -1,0 +1,188 @@
+// Required
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+$primary: #91c9ec;
+$body-bg: #fbfdfe;
+$secondary: #bbdaed;
+$tertiary: #e7f2f9;
+$accent: #bbdaed;
+$body-color: #010504;
+$darkbg: #061818;
+$dark2: #0e247c;
+$dark1: black;
+
+[data-bs-theme="light"] {
+  $primary: #bbdaed;
+  $secondary: #91c9ec;
+  $light: #bbdaed;
+  $white: #fbfdfe;
+  $theme-color-interval: 12%;
+  $dark: #0000;
+  $body-color: #010504;
+  .navbar {
+    --bs-navbar-color: #{$body-color};
+    --bs-navbar-hover-color: #{$accent};
+    --bs-navbar-active-color: #{$accent};
+    background-color: $tertiary;
+  }
+  .dropdown-menu {
+    --bs-dropdown-link-hover-bg: #{$tertiary};
+    --bs-body-bg: #{$primary};
+    --bs-dropdown-bg: #{$tertiary};
+    --bs-dropdown-link-active-bg: #{$primary};
+  }
+
+  .btn-light {
+    $color: $body-color;
+    --bs-btn-bg: #{$accent};
+    --bs-btn-active-bg: #{$accent};
+    --bs-btn-active-border-color: #{$accent};
+    --bs-btn-focus-border-color: #{$accent};
+    --bs-btn-focus-box-shadow: #{$accent};
+  }
+  .btn-secondary {
+    --bs-btn-bg: #{$secondary};
+    $color: $body-color;
+    --bs-btn-active-bg: #{$secondary};
+    --bs-btn-active-border-color: #{$secondary};
+    --bs-btn-focus-border-color: #{$secondary};
+    --bs-btn-focus-box-shadow: #{$secondary};
+  }
+  label {
+    color: darken($primary, 20);
+  }
+  .card {
+    background-color: $body-bg;
+  }
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #{$darkbg};
+  --bs-body-bg-rgb: #{to-rgb($darkbg)};
+  --bs-secondary-bg: #{$dark2};
+  --bs-secondary-bg-rgb: #{to-rgb($dark2)};
+  .navbar {
+    background-color: #27639b;
+  }
+  .shadow {
+    $box-shadow: #e7f2f9;
+  }
+}
+
+form {
+  $input-focus-bg: $accent;
+  $input-focus-color: $accent;
+  $input-bg: $accent;
+  border: none;
+}
+
+body {
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  .bi {
+    width: 1em;
+    height: 1em;
+    fill: currentcolor;
+  }
+  .dropdown-menu {
+    padding: 0.25rem;
+
+    li + li {
+      margin-top: 0.125rem;
+    }
+  }
+
+  .dropdown-item {
+    border-radius: 0.25rem;
+  }
+
+  .active {
+    font-weight: 600;
+
+    .bi {
+      display: block !important; // stylelint-disable-line declaration-no-important
+    }
+  }
+  img {
+    height: 5rem;
+  }
+}
+
+.main {
+  position: relative;
+  margin-top: 50px;
+}
+
+.signup {
+  background-image: url("../assets/bg.png");
+  background-size: cover;
+  color: $primary;
+  height: 100vh;
+}
+
+.users {
+  float: "left";
+}
+
+.profile-pic {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.post-image {
+  width: 800px;
+  height: 200px;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: darken($accent, 30);
+}
+@media (min-width: 992px) {
+  .gedf-main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .gedf-card {
+    margin-bottom: 2.77rem;
+  }
+}
+
+.user-area {
+  max-width: 800px;
+}
+
+.header-img {
+  width: 800px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-page {
+ position:relative;
+}
+
+.comment, .user-posts{
+  position: relative;
+}
