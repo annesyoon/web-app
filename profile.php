@@ -74,17 +74,7 @@ $thisUser = $fetch_user['username'];
 
                     </div>
                 </div>
-                <!-- about -->
-                <div class="px-4 py-3">
-                    <h5 class="mb-0">About</h5>
-                    <div class="p-4 rounded shadow-sm">
-                        <p class="font-italic mb-0">Web Developer</p>
-                        <p class="font-italic mb-0">Lives in New York</p>
-                        <p class="font-italic mb-0">Photographer</p>
-                    </div>
-                </div>
-                <!-- about -->
-
+    
                 <!-- posts -->
                 <div class="py-4 px-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
@@ -163,7 +153,7 @@ function Posts()
     </div>";
         } else {
             echo "
-             <div class='p-4 rounded shadow-sm bg-light gedf-card'>
+             <div class='p-4 rounded shadow-sm gedf-card'>
         <div class='card-header'>
             <div class='d-flex justify-content-between align-items-center'>
                 <div class='d-flex justify-content-between align-items-center'>

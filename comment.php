@@ -91,7 +91,7 @@ if (isset($_POST['enter'])) {
 function getPost()
 {
     global $there, $con;
-    $getposts = "SELECT * from post JOIN info on info.id = post.userid JOIN profimg on profimg.userid = post.userid  WHERE postid='$there' ORDER BY `post`.`time` DESC";
+    $getposts = "SELECT * from post JOIN info on info.id = post.userid JOIN profimg on profimg.userid = post.userid  WHERE postid='$there' ORDER BY `post`.`time` ASC";
     $r_post = mysqli_query($con, $getposts);
     while ($row = mySQLi_fetch_array($r_post)) {
         global $my_id;
@@ -152,7 +152,7 @@ function getPost()
     </div>";
     } else {
         echo "
-             <div class='p-4 rounded shadow-sm bg-light gedf-card'>
+             <div class='p-4 rounded shadow-sm gedf-card'>
         <div class='card-header'>
             <div class='d-flex justify-content-between align-items-center'>
                 <div class='d-flex justify-content-between align-items-center'>
@@ -199,7 +199,7 @@ function getPost()
 function Showcom()
 {
     global $there, $con;
-    $getcom = "SELECT * FROM comments JOIN info on info.id = comments.userid LEFT JOIN post on post.postid = comments.postid WHERE post.postid='$there' ORDER BY `comments`.`time` DESC;";
+    $getcom = "SELECT * FROM comments JOIN info on info.id = comments.userid LEFT JOIN post on post.postid = comments.postid WHERE post.postid='$there' ORDER BY `comments`.`time` ASC;";
     $result = mysqli_query($con, $getcom);
     while ($row = mySQLi_fetch_array($result)) {
         global $my_id;

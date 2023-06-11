@@ -39,15 +39,16 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/light.png" type="image/x-icon">
+    <title>Signup | Tourista</title>
     <link rel="stylesheet" href="css/common.css?<?php echo time(); ?>">
 </head>
 
 <body data-bs-theme="light" class="signup d-flex flex-row justify-content-between align-items-center offset-md-5">
-   
+
     <section class="d-flex ms-auto align-items-center">
         <form action="" method="post">
-            <img src="assets/logo.png" alt="">
+            <img src="assets/light.png" alt="">
             <div class="text-start">
                 <h5>JOIN YOUR FELLOW TOURISTAS FOR FREE</h5>
                 <h3>CREATE A NEW ACCOUNT</h3>

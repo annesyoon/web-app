@@ -136,7 +136,7 @@ if ($uploadOk == 1) {
         <!-- get all user posts -->
         <?php
 
-        $postquery = "SELECT * from post JOIN info on info.id = post.userid JOIN profimg on profimg.userid = post.userid ORDER BY `post`.`time` DESC";
+        $postquery = "SELECT * from post JOIN info on info.id = post.userid JOIN profimg on profimg.userid = post.userid ORDER BY `post`.`time` DES";
         $result_post = mysqli_query($con, $postquery);
         function Profilepics()
         {
